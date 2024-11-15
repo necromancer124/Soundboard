@@ -55,7 +55,6 @@ This is a simple Python-based soundboard application that allows users to play s
 - `main.py`: The main script for the soundboard application.
 - `sounds/`: A folder (automatically created) where sound files are stored.
 
-## MIT License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ---
 
