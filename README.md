@@ -55,36 +55,7 @@ This is a simple Python-based soundboard application that allows users to play s
 - `main.py`: The main script for the soundboard application.
 - `sounds/`: A folder (automatically created) where sound files are stored.
 
-## Example Commands
-
-```bash
-Commands: play,getaudiodivice,stop
-Write a command: play
-Input the number of the file to play: 0
-Now playing: example_sound.wav
-
-Write a command: stop
-Music stopped.
-
-Write a command: getaudiodivice
-Available audio devices:
-0: Microphone (Realtek High Defini (Input)
-1: Speakers (Realtek High Definition Audio) (Output)
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-markdown
-Copy code
-
-### How to Use This Template:
-
-1. **Repository Information:** Replace `yourusername` in the clone URL with your GitHub username.
-2. **Dependencies:** Make sure your `requirements.txt` (if using) includes `pygame` and `sounddevice`.
-3. **Additional Details:** Feel free to customize the sections like features, installation, and usage according to your exact implementation.
-
-This `README.md` provides a clear overview of how to set up, use, and extend the project.
-```
-##MIT License
+## MIT License
 
 Copyright (c) [2024] [Nir Shmidov]
 
