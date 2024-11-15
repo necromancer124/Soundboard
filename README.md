@@ -1,78 +1,85 @@
 # Soundboard Application
 
-This Python application allows you to manage and play audio files from a specific folder. It uses **Pygame** for audio playback and **Sounddevice** for listing available audio devices.
+This is a simple Python-based soundboard application that allows users to play sound files from a specified folder, stop playback, and get a list of available audio input devices. It uses the `pygame` library for audio playback and `sounddevice` for listing audio devices.
 
 ## Features
-- **Play Sound**: Choose a sound file from a predefined folder and play it.
-- **Stop Music**: Stop any sound currently playing.
-- **Get Audio Devices**: List all available input and output audio devices on your system.
-- **Help**: Displays information about the available commands.
+
+- **Play Sound:** Allows the user to play sound files from a `sounds` folder.
+- **Stop Sound:** Stops any currently playing sound.
+- **Get Audio Devices:** Displays a list of available audio input and output devices.
+- **Dynamic Folder Creation:** The application automatically creates a `sounds` folder in the same directory as the executable (or script) if it doesn't exist.
 
 ## Requirements
-Before running this program, make sure you have the following libraries installed:
-- **pygame**
-- **sounddevice**
 
-You can install them using `pip`:
+- Python 3.x
+- `pygame` library
+- `sounddevice` library
 
-```bash
-pip install pygame sounddevice
-```
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/yourusername/soundboard.git
+    cd soundboard
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    pip install pygame sounddevice
+    ```
 
 ## Usage
 
-### Running the Program
-Run the Python script (`main.py`) and interact with the program via the command line. The program will prompt you to enter a command.
+1. Run the application:
 
-### Commands
-- **play**: Plays a selected audio file from the folder.
-- **stop**: Stops the currently playing audio.
-- **getaudiodivice**: Lists available audio devices on your system.
-- **help**: Displays a list of available commands.
+    ```bash
+    python main.py
+    ```
 
-### Example Commands
-1. **play**: 
-   - When prompted, enter the number corresponding to the file you want to play (from the list of available files in the folder).
+2. Once the program is running, you can use the following commands:
+    - `play`: Prompts you to choose a sound file to play from the `sounds` folder.
+    - `stop`: Stops the currently playing sound.
+    - `getaudiodivice`: Lists all available audio input/output devices.
+    - `help`: Displays a list of available commands.
 
-2. **getaudiodivice**: 
-   - Lists all available audio devices (input/output).
+## How It Works
 
-3. **stop**:
-   - Stops the music that is currently playing.
+1. The program initializes the Pygame mixer with a default audio device (e.g., CABLE Input).
+2. The `setUp()` function checks if the `sounds` folder exists in the same directory as the executable. If not, it creates the folder.
+3. The user is prompted to enter a command to play, stop music, or list available devices.
 
-### Folder Setup
-- Make sure you have a folder containing audio files (e.g., `.mp3` or `.wav` format).
-- Update the `folder_path` variable in the code to match the location of your sound files.
+## Folder Structure
 
-```python
-folder_path = "C:/Users/nir/Desktop/sounds"  # Replace with your actual folder path
-```
+- `main.py`: The main script for the soundboard application.
+- `sounds/`: A folder (automatically created) where sound files are stored.
 
-### Example of Running the Program
+## Example Commands
 
 ```bash
-Commands: play, getaudiodivice, stop
+Commands: play,getaudiodivice,stop
+Write a command: play
+Input the number of the file to play: 0
+Now playing: example_sound.wav
+
+Write a command: stop
+Music stopped.
+
 Write a command: getaudiodivice
 Available audio devices:
-0: Microsoft Sound Mapper - Input (Input)
-1: Microphone (Realtek High Definition) (Input)
-...
-```
+0: Microphone (Realtek High Defini (Input)
+1: Speakers (Realtek High Definition Audio) (Output)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-```bash
-Commands: play, getaudiodivice, stop
-Write a command: play
-Files in the folder:
-File number 0: sound1.wav
-File number 1: sound2.wav
-...
-Input the number of the file to play: 1
-Now playing: sound2.wav
-```
+markdown
+Copy code
 
-## Notes
-- The program requires you to have audio files in the specified folder path for the "play" command to work.
-- The program uses **VB-Audio Virtual Cable** for output (you can change it to your desired device if needed).
+### How to Use This Template:
 
-## License
-This project is open source and available under the MIT License. See the [LICENSE](LICENSE) file for more information.
+1. **Repository Information:** Replace `yourusername` in the clone URL with your GitHub username.
+2. **Dependencies:** Make sure your `requirements.txt` (if using) includes `pygame` and `sounddevice`.
+3. **Additional Details:** Feel free to customize the sections like features, installation, and usage according to your exact implementation.
+
+This `README.md` provides a clear overview of how to set up, use, and extend the project.
