@@ -114,6 +114,6 @@ This project is open-source and free to use. You can freely use, modify, and dis
 ---
 
 **Credits:**
-- Author: [Mir Smidov]
+- Author: [Nir Smidov]
 - License: MIT License
 
